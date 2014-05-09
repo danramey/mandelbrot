@@ -64,7 +64,7 @@ angular.module('mandelbrotApp')
 	}
 
 	return {
-		template: '<canvas ng-keydown="changeIndex($event)" class="mandelbrot" ng-class="{out: shiftKey}" width="{{width}}px" height="{{height}}px" ></canvas>',
+		template: '<canvas class="mandelbrot" width="{{width}}px" height="{{height}}px" ></canvas>',
 	  	restrict: 'E',
 	  	
 	  	link: function postLink(scope, iElement, iAttrs, controller) {
@@ -82,7 +82,7 @@ angular.module('mandelbrotApp')
 			//set the height and width of the canvas
 			scope.width = width;
 	  		scope.height = height;
-	  		
+
 			//expose testPoint for testing
 			scope.testPoint = testPoint;
 
